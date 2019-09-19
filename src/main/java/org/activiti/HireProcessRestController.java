@@ -19,8 +19,7 @@ public class HireProcessRestController {
     private ApplicantRepository applicantRepository;
 
     @ResponseStatus(value = HttpStatus.OK)
-    @RequestMapping(value = "/start-hire-process", method = RequestMethod.POST,
-            produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/start-hire-process", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public void startHireProcess(@RequestBody Map<String, String> data) {
 
         Applicant applicant = new Applicant(data.get("name"), data.get("email"), data.get("phoneNumber"));
